@@ -3,3 +3,6 @@ armstrong==11.09.0.alpha.1
 # This is included here because the latest release of django-mptt does not have
 # the required code.
 -e git://github.com/django-mptt/django-mptt.git@0af02a95877041b2fd6d458bd95413dc1666c321#egg=django_mptt-dev
+
+# For local development TODO switch to a stable version before merging to master
+-e git://github.com/crccheck/pinax-theme-bootstrap.git@#egg=pinax_theme_bootstrap-dev
