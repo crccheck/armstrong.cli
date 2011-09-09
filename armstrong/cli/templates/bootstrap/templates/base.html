@@ -1,35 +1,23 @@
 {% extends "theme_base.html" %}
 {% load section_helpers %}
 
-{% block extra_head %}
-<style>
-    #sidemenu {
-        float:left;
-        width:150px;
-        margin-right:15px;
-    }
-    #container {
-        float:left;
-        width:600px;
-    }
-</style>
-{% endblock %}
-
 {% block topbar %}
   {% block header %}
-      <h1>Welcome to Armstrong!</h1>
+      <h3><a href="{% url front_page %}">Welcome to Armstrong!</a></h3>
   {% endblock %}
 {% endblock %}
 
 {% block body %}
-    <div id="sidemenu">
+  <div class="row">
+    <div class="span4 columns">
         {% block sidemenu %}
-        <a href='{% url front_page %}'>Home</a>
+        <a href="{% url front_page %}">Home</a>
         {% section_menu section_view='section_view' %}
         {% endblock %}
     </div>
-    <div id="container">
+    <div class="span12 columns">
         {% block content %}
         {% endblock %}
     </div> <!--! end of #container -->
+  </div>
 {% endblock %}
